@@ -9,8 +9,5 @@ const handle = app.getRequestHandler();
 
 
 app.prepare().then(() => {
-  createServer(handle).listen(3000, err => {
-    if (err) throw err;
-    console.log('Ready on localhost:3000');
-  });
+  createServer(handle).listen(process.env.PORT);
 });
